@@ -4,7 +4,7 @@
 
 ## El Problema: Registro de Atletas Olímpicos
 
-La federación mundial de atletismo a solicitado una programa que permita gestionar los datos de los atletas de varios paises que participaron en las últimas olimpiadas. Se requiere un programa que les permita:
+La federación mundial de atletismo a solicitado un programa que permita gestionar los datos de los atletas de varios paises que participaron en las últimas olimpiadas. Se requiere un programa que les permita:
 
   1.- **Registrar a los atletas**: Se deberá almacenar el nombre de cada atleta, su país de origen, la disciplina que practica, su genero, y el número de medallas de oro que ganó.
   2.- **Buscar y mostrar la información de un atleta**: Dado el nombre de un atleta, el programa debe mostrar su país de origen y el número de medallas de oro.
