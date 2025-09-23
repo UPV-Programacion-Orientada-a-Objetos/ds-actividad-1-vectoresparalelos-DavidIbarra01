@@ -1,8 +1,13 @@
+![Programando-con-estilo](https://damnitsayush.carrd.co/assets/images/image01.gif?v=4c186d96)  
+
+[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.
+github.com/a/9quZgW1u)
+[![Open in Codespaces](https://classroom.github.com/assets/launch-codespace-2972f46106e565e64193e422d61a12cf1da4916b45550586e14ef0a7c637dd04.svg)](https://classroom.github.com/open-in-codespaces?assignment_repo_id=20609959)
 # Actividad - Vectores Paralelos
 
 ## El Problema: Registro de Atletas Olímpicos
 
-La federación mundial de atletismo a solicitado una programa que permita gestionar los datos de los atletas de varios paises que participaron en las últimas olimpiadas. Se requiere un programa que les permita:
+La federación mundial de atletismo a solicitado un programa que permita gestionar los datos de los atletas de varios paises que participaron en las últimas olimpiadas. Se requiere un programa que les permita:
 
   1.- **Registrar a los atletas**: Se deberá almacenar el nombre de cada atleta, su país de origen, la disciplina que practica, su genero, y el número de medallas de oro que ganó.
   2.- **Buscar y mostrar la información de un atleta**: Dado el nombre de un atleta, el programa debe mostrar su país de origen y el número de medallas de oro.
