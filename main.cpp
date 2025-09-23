@@ -51,7 +51,7 @@ do
  {
     std::cout << "ERROR: No queda espacio para mas atletas pipipi (maximo de hasta 50)\n";
  }else{    
-
+std::cout << "---------------------------------\n";
  std::cout << "Ingrese el nombre del atleta:\n";
     std::cin.ignore(); //Limpia el cin
     std::getline(std::cin, nombres_atletas[numero_atletas]);
@@ -81,7 +81,9 @@ do
     }
     //Guardar atleta
 
-            std::ofstream archivo("data/list.csv", std::ios::out);
+
+            std::ofstream archivo("data/list.csv", std::ios::app);
+
             if (archivo.fail()) {
                 std::cout << "Ocurrio un error al abrir el archivo\n";
                
@@ -101,8 +103,10 @@ do
     case 2: //La busqueda de atletas :)
    
 if(numero_atletas == 0) {
+
             std::cout << "Los arrays estan vacios.\n";
         } else {
+            std::cout << "---------------------------------\n";
             std::cout << "Ingrese el nombre del atleta a buscar: ";
             std::string findName;
             std::cin >> findName;
@@ -124,13 +128,67 @@ if(numero_atletas == 0) {
             }
         }
 
-    break;
+    break; //FIN DEL CASE 2
+       
+
+case 3: {
+        if(numero_atletas == 0) {
+            std::cout << "ARRAY VACIO (no hay atletas)\n";
+        } else {
+            std::cout << "---------------------------------\n";
+            std::cout << "Ingrese el nombre del pais: ";
+            std::string paisFind;
+            std::cin >> paisFind;
+            
+            int totalMedallas = 0;
+            bool pikaBo = false;
+            for(int i = 0; i < numero_atletas; i++) {
+                if(paises_origen[i] == paisFind) {
+                    totalMedallas += cantidades_medallas[i];
+                    pikaBo = true;
+                }
+            }
+//********----------------------------------------------------------------***********
+            if(pikaBo) {
+                std::cout << "Total de medallas de oro de " << paisFind << ": " << totalMedallas << std::endl;
+            } else {
+                std::cout << "No hay atletas en el pais de " << paisFind << std::endl;
+            }
+        }
+        break;
+    }
+
+
+case 4: {
+        if(numero_atletas == 0) {
+            std::cout << "array vacio (mo hay atletas)\n";
+        } else {
+            std::cout << "---------------------------------\n";
+            int maxMedallas = cantidades_medallas[0];
+            int indiceMax = 0;
+            
+            for(int i = 1; i < numero_atletas; i++) {
+                if(cantidades_medallas[i] > maxMedallas) {
+                    maxMedallas = cantidades_medallas[i];
+                    indiceMax = i;
+                }
+            }
+            
+            std::cout << "El atleta con mas medallas de oro es: " << nombres_atletas[indiceMax] << ". Con un total de " << cantidades_medallas[indiceMax] << " medallas\n";
+        }
+        break;
+    }
+
  default:
- std::cout << "Ingrese una opcion valida\n";
-    break;
+ if (select != 5) // Para evitar que a la hora de salirse, te imprima esto
+ {
+   std::cout << "Ingrese una opcion valida\n";
  }
 
-} while (true); //EL CORAZON DEL PROGRAMA
+    break;
+ }
+//-------------------------------------
+} while (select !=5); //EL CORAZON DEL PROGRAMA
 
     std::cout << "Gracias por haber utilizado el programa :3\n";
     return 0;
