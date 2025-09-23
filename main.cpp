@@ -1,9 +1,16 @@
 //El Prototipo
 #include <iostream>
+#include <vector>
+#include <string>
 //PROBLEMA PROBLEMON: Registro de Atletas Olímpicos
 
-void Registrar(){
-
+void Registrar(std::vector<std::string>&nombres){
+    std::string name;
+std::cout << "Ingrese el nombre del atleta:";
+std::cin.ignore();
+std::getline(std::cin, name);
+nombres.push_back(name);
+std::cout << nombres[0];
 
 
 }
@@ -21,6 +28,8 @@ void AtletaHardcore(){
 }
 
 void menu(){
+   
+
     /*std::cout << "+----------------------------------------------------+" << std::endl;
 |                       FEDERACIÓN MUNDIAL DE ATLETISMO                        |
 |-------------------------------------------------------------------------------|
@@ -34,6 +43,14 @@ void menu(){
 |   
 +-------------------------------------------------------------------------------+
 ";*/
+
+ //Mis variables
+    std::vector<std::string> nombres_atletas;
+     std::vector<std::string> pais_origen;
+     std::vector<std::string> disciplina;
+    char genero[] = {};
+    int cantidad_medallas[] = {};
+
     std::cout << "1) Registrar Atleta." << std::endl;
     std::cout << "2) Buscar Atleta." << std::endl;
     std::cout << "3) Calcular el total de medallas de oro del pais." << std::endl;
@@ -48,7 +65,7 @@ void menu(){
        std::cout << "Dato invalido\n";
     } else if (select == 1)
     {
-        Registrar();
+        Registrar(nombres_atletas);
        break;
     }else if (select == 1)
     {
